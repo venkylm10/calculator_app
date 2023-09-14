@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                 tColor: orangeColor,
                 onPressed: () {
                   setState(() {
-                    input = "0";
+                    input = "";
                     output = "0";
                   });
                 },
@@ -247,7 +247,11 @@ class _HomePageState extends State<HomePage> {
         errorMessage = "Invalid Input";
       } else {}
       final snackBar = SnackBar(
+        backgroundColor: Colors.transparent,
+        padding: const EdgeInsets.only(bottom: 5, left: 10, right: 10),
         content: Container(
+          width: double.infinity,
+          height: 40,
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             color: operatorColor,
